@@ -4,9 +4,15 @@
 Enemy::Enemy(sf::Vector2f pos) {
     shape.setRadius(20);
     shape.setFillColor(sf::Color::Red);
+    shape.setOutlineColor(sf::Color(200, 50, 50));
+    shape.setOutlineThickness(2);
     shape.setOrigin(20, 20);
     shape.setPosition(pos);
     startX = pos.x;
+    speed = 150.0f;
+    swayAmplitude = 60.0f;
+    swayFrequency = 2.5f;
+    time = 0;
 }
 
 void Enemy::update(float dt) {
