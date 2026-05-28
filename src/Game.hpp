@@ -18,19 +18,23 @@ private:
     void render();
     void spawnEnemy();
     void checkCollisions();
+    void spawnExplosion(sf::Vector2f pos, sf::Color color, int count);
     
     sf::RenderWindow window;
     sf::Clock clock;
     sf::Font font;
     sf::Text scoreText;
+    sf::Text gameOverText;
+    sf::Text restartText;
     
     std::unique_ptr<Player> player;
     std::vector<std::unique_ptr<Bullet>> bullets;
-    std::vector<std::unique_ptr<Enemy>> enemies;
-    std::vector<std::unique_ptr<Particle>> particles;
+    std::vector<std::unique_ptr<<Enemy>> enemies;
+    std::vector<std::unique_ptr<<Particle>> particles;
     
-    float spawnTimer = 0;
-    float spawnInterval = 1.5f;
-    int score = 0;
-    bool gameOver = false;
+    float spawnTimer;
+    float spawnInterval;
+    int score;
+    bool gameOver;
+    float screenShake;
 };
