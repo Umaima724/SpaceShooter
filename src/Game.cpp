@@ -141,7 +141,7 @@ void Game::checkCollisions() {
                 score += 100;
                 screenShake = 1.0f;
                 
-                spawnExplosion(enemy->getBounds().getCenter(), 
+                spawnExplosion(getCenter(enemy->getBounds()), 
                     sf::Color(255, 100 + rand() % 155, 0), 15);
             }
         }
