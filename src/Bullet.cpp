@@ -3,8 +3,11 @@
 Bullet::Bullet(sf::Vector2f pos) {
     shape.setSize({6, 18});
     shape.setFillColor(sf::Color::Yellow);
+    shape.setOutlineColor(sf::Color(255, 200, 0));
+    shape.setOutlineThickness(1);
     shape.setOrigin(3, 9);
     shape.setPosition(pos);
+    speed = 600.0f;
 }
 
 void Bullet::update(float dt) {
