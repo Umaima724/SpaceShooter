@@ -10,9 +10,9 @@ public:
     
 private:
     sf::CircleShape shape;
-    float speed = 150.0f;
-    float swayAmplitude = 50.0f;
-    float swayFrequency = 2.0f;
-    float time = 0;
+    float speed;
+    float swayAmplitude;
+    float swayFrequency;
+    float time;
     float startX;
 };
